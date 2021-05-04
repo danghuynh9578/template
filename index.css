@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/golden-gate-bridge.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.ovelay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 135deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
+}
