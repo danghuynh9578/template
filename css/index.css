@@ -22,7 +22,7 @@ img {
 .header {
     width: 100%;
     height: 100vh;
-    background-image: url(img/golden-gate-bridge.jpg);
+    background-image: url(/img/golden-gate-bridge.jpg);
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -31,4 +31,109 @@ img {
     width: 100%;
     height: 100%;
     background: linear-gradient( 135deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
+}
+
+.wrap {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.nav-img {
+    height: 30px;
+    margin-right: 65px;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar .active a {
+    color: #1ac6ff;
+    border-bottom: 2px solid #1ac6ff;
+}
+
+.nav-bar>li {
+    display: inline-block;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.nav-bar li+.nav-bar li {
+    margin-right: 30px;
+}
+
+.nav-bar>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    display: block;
+}
+
+.nav-bar>li>a:hover {
+    color: #1ac6ff;
+}
+
+.nav-btn {
+    margin-left: auto;
+}
+
+.nav-btn__login {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.nav-btn__login:hover {
+    color: #1ac6ff;
+}
+
+.button {
+    color: #1ac6ff;
+    display: inline-block;
+    min-width: 144px;
+    max-width: 100%;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px solid #1ac6ff;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #1ac6ff;
+}
+
+.submenu {
+    width: 250px;
+    background-color: #000;
+    min-height: 150px;
+    display: none;
+    position: absolute;
+}
+
+.submenu>li {
+    display: block;
+}
+
+.submenu>li>a {
+    display: block;
+    border-top: 1px solid #ccc;
+    line-height: 50px;
+    text-indent: 10px;
+    color: #fff;
+}
+
+.nav-bar>li:hover .submenu {
+    display: block;
+}
+
+.dropdown>a:hover {
+    background-color: #000;
+    border-top: 2px solid #1ac6ff;
 }
