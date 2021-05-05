@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 img {
     background-position: center;
     background-repeat: no-repeat;
@@ -54,11 +58,6 @@ img {
     display: flex;
 }
 
-.nav-bar .active a {
-    color: #1ac6ff;
-    border-bottom: 2px solid #1ac6ff;
-}
-
 .nav-bar>li {
     display: inline-block;
     padding: 10px 0px;
@@ -76,7 +75,7 @@ img {
     display: block;
 }
 
-.nav-bar>li>a:hover {
+.nav-bar>li:hover>a {
     color: #1ac6ff;
 }
 
@@ -109,31 +108,61 @@ img {
     background-color: #1ac6ff;
 }
 
+.dropdown {
+    position: relative;
+}
+
 .submenu {
-    width: 250px;
-    background-color: #000;
-    min-height: 150px;
-    display: none;
     position: absolute;
+    left: 0;
+    top: calc(100% -10px);
+    background-color: #272727;
+    min-width: 160px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height .25s ease-out opacity .25s ease-out;
 }
 
-.submenu>li {
-    display: block;
+.submenu li:hover>a {
+    color: #1ac6ff;
 }
 
-.submenu>li>a {
-    display: block;
-    border-top: 1px solid #ccc;
-    line-height: 50px;
-    text-indent: 10px;
+.submenu li:hover {
+    background-color: #000000;
+}
+
+.submenu li a {
     color: #fff;
+    line-height: 40px;
 }
 
-.nav-bar>li:hover .submenu {
-    display: block;
+.submenu>.dropdown>.submenu {
+    top: 0;
+    left: 100%;
 }
 
-.dropdown>a:hover {
-    background-color: #000;
+li.dropdown:hover>.submenu {
+    visibility: visible;
+    opacity: 1;
+    max-height: 300px;
+    transition: all .25s ease-in;
+    transition: max-height .25s ease-out opacity .25s ease-out;
+}
+
+.dropdown a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.active>a {
+    border-bottom: 2px solid #1ac6ff;
+}
+
+.nav-bar>.dropdown:hover>a {
+    background-color: #272727;
     border-top: 2px solid #1ac6ff;
 }
